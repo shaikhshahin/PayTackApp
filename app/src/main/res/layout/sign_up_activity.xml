@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_dark"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/custom_toolbar_title"
+                android:layout_width="@dimen/social_image_height_width"
+                android:layout_height="@dimen/social_image_height_width"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:src="@drawable/right_arrow" />
+
+            <ImageView
+                android:layout_width="@dimen/signup_image_height_width"
+                android:layout_height="@dimen/signup_image_height_width"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/paytack_logo" />
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/vertical_horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/vertical_horizontal"
+            android:orientation="vertical">
+
+            <com.example.nex4jmq.paytackapp.customviews.BoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_6dp"
+                android:gravity="center"
+                android:text="@string/sign_up_text"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/size_22sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/signup_image_height_width"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="@dimen/social_image_height_width"
+                    android:layout_height="@dimen/social_image_height_width"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/vertical_horizontal"
+                    android:layout_marginRight="@dimen/vertical_horizontal"
+                    android:src="@drawable/user" />
+
+                <com.example.nex4jmq.paytackapp.customviews.EditTextViewSignup
+                    android:id="@+id/tvName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:hint="@string/sign_up_nametext"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    android:maxLength="3"
+                    android:maxLines="1"
+                    android:nextFocusDown="@+id/tv"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/light_background"
+                    android:textSize="@dimen/size_16sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:background="@drawable/line_bg">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vertical_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="@dimen/social_image_height_width"
+                    android:layout_height="@dimen/social_image_height_width"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/vertical_horizontal"
+                    android:layout_marginRight="@dimen/vertical_horizontal"
+                    android:src="@drawable/mail" />
+
+                <com.example.nex4jmq.paytackapp.customviews.EditTextViewSignup
+                    android:id="@+id/tvEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:hint="@string/sign_up_emailtext"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="20"
+                    android:maxLines="1"
+                    android:nextFocusDown="@+id/tvMobileNumber"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/light_background"
+                    android:textSize="@dimen/size_16sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:background="@drawable/line_bg">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vertical_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccp"
+                    app:ccpDialog_textColor="@color/colorBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="@dimen/social_image_height_width"
+                    android:layout_height="@dimen/social_image_height_width"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/vertical_horizontal"
+                    android:layout_marginRight="@dimen/vertical_horizontal"
+                    android:src="@drawable/user" />
+
+                <com.example.nex4jmq.paytackapp.customviews.EditTextViewSignup
+                    android:id="@+id/tvMobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:hint="@string/sign_up_mobnotext"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:nextFocusDown="@+id/tvPassword"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/light_background"
+                    android:textSize="@dimen/size_16sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:background="@drawable/line_bg">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vertical_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="@dimen/social_image_height_width"
+                    android:layout_height="@dimen/social_image_height_width"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/vertical_horizontal"
+                    android:layout_marginRight="@dimen/vertical_horizontal"
+                    android:src="@drawable/locked" />
+
+                <com.example.nex4jmq.paytackapp.customviews.EditTextViewSignup
+                    android:id="@+id/tvPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:hint="@string/sign_up_passtext"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:maxLength="6"
+                    android:maxLines="1"
+                    android:nextFocusDown="@+id/tvConfirmPassword"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/light_background"
+                    android:textSize="@dimen/size_16sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:background="@drawable/line_bg">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/vertical_horizontal"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <ImageView
+                    android:layout_width="@dimen/social_image_height_width"
+                    android:layout_height="@dimen/social_image_height_width"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="@dimen/vertical_horizontal"
+                    android:layout_marginRight="@dimen/vertical_horizontal"
+                    android:src="@drawable/locked" />
+
+                <com.example.nex4jmq.paytackapp.customviews.EditTextViewSignup
+                    android:id="@+id/tvConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:hint="@string/sign_up_passconfirmtext"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:maxLength="6"
+                    android:maxLines="1"
+                    android:nextFocusDown="@+id/llContinue"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/light_background"
+                    android:textSize="@dimen/size_16sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:background="@drawable/line_bg">
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <CheckBox
+                    android:id="@+id/chbAgreementAceeptance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:buttonTint="@color/colorAccent"
+                     />
+
+                <com.example.nex4jmq.paytackapp.customviews.BoldTextView
+                    android:id="@+id/tvagreement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@id/chbAgreementAceeptance"
+                    android:text="@string/sign_up_accepttext"
+                    android:textColor="@color/light_background"
+                    android:textSize="@dimen/size_16sp"
+                    android:textStyle="normal" />
+
+
+                <com.example.nex4jmq.paytackapp.customviews.BoldTextView
+                    android:id="@+id/tvagreemePrivacy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@id/tvagreement"
+                    android:autoLink="web"
+                    android:text="@string/sign_up_privacytext"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/size_18sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/llContinue"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/linear_layout_height"
+                android:layout_marginLeft="@dimen/linera_layout_margin"
+                android:layout_marginRight="@dimen/linera_layout_margin"
+                android:layout_marginTop="@dimen/vertical_horizontal"
+                android:background="@drawable/rectangle_bg"
+                android:orientation="horizontal">
+
+
+                <com.example.nex4jmq.paytackapp.customviews.BoldTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/sign_up_continuetext"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/size_16sp"
+                    android:textStyle="normal" />
+
+
+            </LinearLayout>
+
+            <com.example.nex4jmq.paytackapp.customviews.BoldTextView
+                android:id="@+id/tvSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/vertical_horizontal"
+                android:gravity="center"
+                android:text="@string/login_text"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/size_16sp"
+                android:textStyle="bold" />
+
+            <com.example.nex4jmq.paytackapp.customviews.BoldTextView
+                android:id="@+id/tvSignUpAg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/vertical_horizontal"
+                android:gravity="center"
+                android:text="@string/agreement_text"
+                android:textColor="@color/light_background"
+                android:textSize="@dimen/size_14sp"
+                android:textStyle="normal" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">PayTackApp</string>
+
+    <string name="login_face_text">Your face is your wallet</string>
+    <string name="login_face_recog">World\'s first face recognition payment solution</string>
+    <string name="login_social_text">Continue with Google</string>
+    <string name="login_text">Log in</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="agreement_text">By signing up,you agree to the \n Customer Agreement and Privacy Policy</string>
+    <string name="sign_up_text">Register with PayTack!</string>
+    <string name="sign_up_nametext">Name*</string>
+    <string name="sign_up_emailtext">Email*</string>
+    <string name="sign_up_mobnotext">Mobile Number*</string>
+    <string name="sign_up_passtext">Password(min. 6 digits)</string>
+    <string name="sign_up_passconfirmtext">Confirm Password*</string>
+    <string name="sign_up_accepttext">I accept the</string>
+    <string name="sign_up_privacytext">Services &amp; Privacy policy</string>
+    <string name="sign_up_continuetext">Continue</string>
+    <string name="alert_ok_button">Ok</string>
+    <string name="alert_phone">Please enter a valid phone number.</string>
+    <string name="alert_phone_digit">Please enter a 10-digit phone number.</string>
+    <string name="alert_email">Please enter a valid email address.</string>
+    <string name="alert_first_name">Please enter a valid first name.</string>
+    <string name="alert_title">Error</string>
+    <string name="all_mandatory">Please enter all required fields.</string>
+    <string name="phone_error">Phone number must be 10 digits.</string>
+    <string name="password_error">Password must be 8 characters.</string>
+    <string name="alert_otp">Please enter an OTP.</string>
+    <string name="alert_password">Please create a Password</string>
+    <string name="accept_user_agreement">Please accept all acknowledgements before proceeding.</string>
+    <string name="no_internet_connection">No internet connection found.  Please try again after sometime.</string>
+    <string name="loading">Loading</string>
+    <string name="verification_code">Verification Code</string>
+    <string name="pin_content_desc">OTP input field</string>
+    <string name="pin_label_text">OTP</string>
+    <string name="verification_text">Please enter verification code sent to</string>
+    <string name="verification_resend">Resend Code</string>
+    <string name="verification_otpexpire">OTP expires in 0.51 seconds</string>
+
+
+</resources>

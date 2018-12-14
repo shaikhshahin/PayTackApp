@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/vertical_horizontal"
+        android:orientation="vertical">
+
+
+        <com.example.nex4jmq.paytackapp.customviews.BoldTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/vertical_horizontal"
+            android:gravity="center"
+            android:text="@string/login_face_text"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/size_18sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/vertical_horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="@dimen/image_width"
+                android:layout_height="@dimen/image_height"
+                android:layout_centerInParent="true"
+                android:src="@drawable/paytack_logo" />
+
+
+        </RelativeLayout>
+
+
+        <com.example.nex4jmq.paytackapp.customviews.BoldTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/vertical_horizontal"
+            android:gravity="center"
+            android:text="@string/login_face_recog"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/size_16sp"
+            android:textStyle="normal" />
+
+
+        <LinearLayout
+            android:id="@+id/llSocialLogin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/linear_layout_height"
+            android:layout_marginLeft="@dimen/linera_layout_margin"
+            android:layout_marginRight="@dimen/linera_layout_margin"
+            android:layout_marginTop="@dimen/vertical_horizontal"
+            android:background="@drawable/rectangle_bg"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/social_image_height_width"
+                android:layout_height="@dimen/social_image_height_width"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/vertical_horizontal"
+                android:gravity="center"
+                android:src="@drawable/search" />
+
+            <com.example.nex4jmq.paytackapp.customviews.BoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/login_social_text"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/size_16sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llLogin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/linear_layout_height"
+            android:layout_marginLeft="@dimen/linera_layout_margin"
+            android:layout_marginRight="@dimen/linera_layout_margin"
+            android:layout_marginTop="@dimen/vertical_horizontal"
+            android:background="@drawable/rectangle_bg"
+            android:orientation="horizontal">
+
+
+            <com.example.nex4jmq.paytackapp.customviews.BoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/login_text"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/size_16sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <com.example.nex4jmq.paytackapp.customviews.BoldTextView
+            android:id="@+id/tvSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/vertical_horizontal"
+            android:gravity="center"
+            android:text="@string/sign_up"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/size_16sp"
+            android:textStyle="bold" />
+
+        <com.example.nex4jmq.paytackapp.customviews.BoldTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/vertical_horizontal"
+            android:gravity="center"
+            android:text="@string/agreement_text"
+            android:textColor="@color/light_background"
+            android:textSize="@dimen/size_10sp"
+            android:textStyle="normal" />
+
+
+    </LinearLayout>
+</LinearLayout>
