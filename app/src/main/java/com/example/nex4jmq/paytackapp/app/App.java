@@ -11,6 +11,6 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        TypefaceUtil.overrideFont(getApplicationContext(), "SERIF", "font/nunito_regular.ttf");
+        TypefaceUtil.overrideFont(getApplicationContext(), "NUNITO", "font/nunito_regular.ttf");
     }
 }
