@@ -70,5 +70,24 @@ public class Utility {
         return true;
     }
 
+    public static void ShowAlertDialog(Context context, String message){
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+        alertDialogBuilder.setTitle("PayTack");
+        alertDialogBuilder.setMessage(message);
+        alertDialogBuilder.setCancelable(false);
+        alertDialogBuilder.setIcon(android.R.drawable.ic_dialog_alert);
+
+        alertDialogBuilder.setPositiveButton("DISCARD", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                // continue with discard
+                dialog.dismiss();
+            }
+        });
+
+
+
+        alertDialogBuilder.show();
+    }
+
 
 }

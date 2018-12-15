@@ -205,7 +205,7 @@ public class PayTackNetworkCall {
 
         try {
             postparams.put(AppConstant.UID, UID);
-            postparams.put(AppConstant.OTP, OTP);
+            postparams.put(AppConstant.OTP, Integer.parseInt(OTP));
 
 
             Log.e("POSTPRICE PARAMS", String.valueOf(postparams));

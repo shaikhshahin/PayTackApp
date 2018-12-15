@@ -17,6 +17,7 @@ import com.example.nex4jmq.paytackapp.R;
 import com.example.nex4jmq.paytackapp.networkcall.PayTackIResult;
 import com.example.nex4jmq.paytackapp.networkcall.PayTackNetworkCall;
 import com.example.nex4jmq.paytackapp.utility.AppConstant;
+import com.example.nex4jmq.paytackapp.utility.Utility;
 
 public class OTPVerificationActivity extends Activity implements View.OnClickListener, View.OnFocusChangeListener {
 
@@ -116,8 +117,12 @@ public class OTPVerificationActivity extends Activity implements View.OnClickLis
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.imArrow:
-                mNetworkService = new PayTackNetworkCall(mCallback, this);
-                mNetworkService.getOTPVerify(UID, OTP);
+                if (Utility.isNetworkAvailable(this)) {
+                    mNetworkService = new PayTackNetworkCall(mCallback, this);
+                    mNetworkService.getOTPVerify(UID, OTP);
+                } else {
+                    Utility.showAlertMessageWithPositiveButton(this, getString(R.string.no_internet_connection), getString(R.string.alert_title));
+                }
                 break;
         }
 

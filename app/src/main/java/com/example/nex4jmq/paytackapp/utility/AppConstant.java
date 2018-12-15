@@ -19,6 +19,7 @@ public class AppConstant {
     public static String SIGN_COUNTRY    = "country";
     public static String OTP  = "otp";
     public static String SUCCESS = "status";
+    public static String REASON = "reason";
     public static String UID = "uid";
 }
 /*{

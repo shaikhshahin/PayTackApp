@@ -12,6 +12,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.VolleyError;
 import com.example.nex4jmq.paytackapp.R;
@@ -93,16 +94,20 @@ public class SignUpActivity extends Activity implements View.OnClickListener {
                         OTP = response.getString(AppConstant.OTP);
                         UID = response.getString(AppConstant.UID);
                         String success = response.getString(AppConstant.SUCCESS);
+                        String reason = response.getString(AppConstant.REASON);
                         if (OTP != null) {
 
                             AppPreference.saveOTP(SignUpActivity.this, OTP);
-                            AppPreference.saveUID(SignUpActivity.this, UID);
                             Intent otpVerify = new Intent(SignUpActivity.this, OTPVerificationActivity.class);
                             otpVerify.putExtra(AppConstant.OTP, OTP);
                             otpVerify.putExtra(AppConstant.UID, UID);
                             otpVerify.putExtra(AppConstant.SIGN_MOBILE, strMobileNum);
                             otpVerify.putExtra(AppConstant.SIGN_CC, strCC);
                             startActivity(otpVerify);
+                        }
+                        if (success.equals("failed")) {
+                            Utility.ShowAlertDialog(SignUpActivity.this, reason);
+                            //Toast.makeText(SignUpActivity.this,reason,Toast.LENGTH_LONG).show();
                         }
                     }
                 } catch (JSONException e) {
@@ -114,7 +119,7 @@ public class SignUpActivity extends Activity implements View.OnClickListener {
             @Override
             public void notifyError(String requestType, VolleyError error) {
 
-                Log.e("COUNTRY UNSUCCESSFUL", String.valueOf(error));
+                Log.e("SIGNUP UNSUCCESSFUL", String.valueOf(error));
 
             }
 
@@ -153,9 +158,6 @@ public class SignUpActivity extends Activity implements View.OnClickListener {
                 Utility.showAlertMessageWithPositiveButton(this, getString(R.string.alert_email), getString(R.string.alert_title));
 
             }
-        } else if (!agreeCheck.isChecked()) {
-            Utility.showAlertMessageWithPositiveButton(this, getString(R.string.accept_user_agreement), getString(R.string.alert_title));
-
         } else {
             if (strCountry.equals("IN")) {
                 if (strMobileNum.length() <= 9) {
@@ -190,9 +192,13 @@ public class SignUpActivity extends Activity implements View.OnClickListener {
             case R.id.llContinue:
                 if (Utility.isNetworkAvailable(this)) {
                     validate();
-                    mNetworkService = new PayTackNetworkCall(mCallback, this);
-                    mNetworkService.SignUp(strName, strEmail, strCC, strCountry, strMobileNum, strPsw);
+                    if (agreeCheck.isChecked()) {
+                        mNetworkService = new PayTackNetworkCall(mCallback, this);
+                        mNetworkService.SignUp(strName, strEmail, strCC, strCountry, strMobileNum, strPsw);
+                    }
+
                 } else {
+                    Utility.showAlertMessageWithPositiveButton(this, getString(R.string.accept_user_agreement), getString(R.string.alert_title));
                     Utility.showAlertMessageWithPositiveButton(this, getString(R.string.no_internet_connection), getString(R.string.alert_title));
                 }
                 break;
